@@ -1,0 +1,26 @@
+body{
+    img{
+        filter: blur(5px);/*difuminamos el fondo de la imagen*/
+    }
+    #carousel_container{
+        position: absolute;
+        width: 100%;
+    }
+    #text_container{
+        background-color:transparent; 
+        height: 100px;
+        width: 100%;   
+        text-align: center;/*centramos el contenido dentro del banner*/
+        position: relative;
+        margin-top: 20%;
+        h2{
+            font-size: 80px;
+            color: white;
+        }
+        h5{
+            font-size: 30px;
+            color: white;
+        }
+
+    }
+}

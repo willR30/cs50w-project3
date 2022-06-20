@@ -1,0 +1,60 @@
+body {
+    background: url('Img_fondo_login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+
+    div {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        border-radius: 10px;
+        width: 45vw;
+        padding: 1%;
+        background-color: red;
+
+        input {
+            margin-left: 1%;
+        }
+
+        button {
+            margin-left: 2%;
+            width: 15%;
+        }
+        
+        #id_toppings{
+            background-color: royalblue;
+        }
+
+    }
+    
+}
+
+@media screen and (min-width: 870px) {
+    body {
+        background: url('Img_fondo_login.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        height: 100vh;
+
+        div {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40%;
+            border-radius: 10px;
+            width: 95%;
+            padding: 5%;
+            background-color: white;
+
+            input {
+                margin-left: 1%;
+            }
+
+            button {
+                width: 40%;
+            }
+        }
+    }
+}

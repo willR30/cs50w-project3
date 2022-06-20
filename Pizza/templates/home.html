@@ -1,0 +1,22 @@
+<!--indicamos de donde exteniende el codigo que está global-->
+{% extends "layout.html" %}
+
+{% block content %}
+{% load static %}
+<!--vinuclamos este html con el css-->
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<div id="carousel_container" class="carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-inner" style="height: 92vh">
+      <div class="carousel-item active">
+        <img src="static/images/banner_1.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+</div>
+
+<div id="text_container">
+  <h2>La casa del Sabor</h2>
+  <h5>El Cliente siempre tiene la sazón</h5>
+</div>
+
+      
+{% endblock %}

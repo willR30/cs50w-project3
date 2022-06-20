@@ -1,0 +1,33 @@
+<!--indicamos de donde exteniende el codigo que está global-->
+{% extends "layout.html" %}
+
+{% block content %}
+{% load static %}
+<!--vinuclamos este html con el css-->
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+<!--El menu estará dentro de una tabla con todolos los proudcto listados-->
+{% csrf_token %}
+<div id="menu_container" style="padding: 1%;">
+    <table class="table" style="border-radius: 10px;">
+        <thead>
+          <tr>
+            <th scope="col">Date</th> <!--Pizza peperoni-->
+            <th scope="col">State</th><!-- Small-->
+            <th scope="col">Total</th><!-- C$200-->
+            <th scope="col">Options</th><!-- C$200-->
+          </tr>
+        </thead>
+        <tbody>
+            <!--Cargamos productos desde la base de datos-->
+             {% for orden in ordens %}
+              <tr>
+                <td>{{ orden.orden_date}}</td>
+                <td>{{ orden.state }}</td>
+                <td>{{ orden.Total }}</td>
+                <td><button type="submit" class="btn btn-danger">Cancel</button></td>
+              </tr>
+             {% endfor %}
+        </tbody>
+      </table>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+<!--indicamos de donde exteniende el codigo que está global-->
+{% extends "layout.html" %}
+
+{% block content %}
+{% load static %}
+<!--vinuclamos este html con el css-->
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+<!--El menu estará dentro de una tabla con todolos los proudcto listados-->
+
+<div id="menu_container" style="padding: 1%;">
+    <table class="table" style="border-radius: 10px;" id="Tabla_menu">
+        <thead>
+          <tr>
+            <th scope="col">Food</th> <!--Pizza peperoni-->
+            <th scope="col">Categorys</th><!--Category-->
+            <th scope="col">Type</th><!-- Small-->
+            <th scope="col">Price</th><!-- C$200-->           
+            <th scope="col">Add</th><!--Check box si, esta true que se agrege al carrito de compra-->
+          </tr>
+        </thead>
+        <!--Por cada lista de tipo de productos creamos una tabla-->
+        <!--Luego a partir de eso se rellena la tabla con los valores-->
+        
+        <tbody id="body_table">
+            <!--Cargamos productos desde la base de datos-->
+            {% for product in productos%}
+             
+             <form action="{% url 'add_pizza_to_orden' product.id_product %}"><!--pasamos el id del producto como parametro a la siguiente vista-->
+              <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.id_category }}</td>
+                <td>{{ product.id_type }}</td>
+                <td>{{ product.price }}</td>
+                <td><button type="submit" class="btn btn-primary">Add to Orden</button></td>
+              </tr>
+             </form>
+            {% endfor %} 
+        </tbody>
+      </table>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+/*incorporar estilos que estan en el html*/
+body {
+  background: url("Img_fondo_login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+body #loginContainerForms {
+  width: 40%;
+  background-color: whitesmoke;
+  padding: 1%;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+}
+
+@media screen and (max-width: 870px) {
+  body #loginContainerForms {
+    width: 95%;
+    background-color: whitesmoke;
+    padding: 1%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,33 @@
+body {
+    background: url('Img_fondo_login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    #RegisterContainerForms{
+        width: 40%;
+        background-color: whitesmoke;
+        padding: 1%;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+
+    }
+}
+
+@media screen and (max-width: 870px) {
+    body {
+        #RegisterContainerForms{
+            width: 95%;
+            background-color: whitesmoke;
+            padding: 1%;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            box-shadow: 3px 3px 3px 3px grey;
+    
+        }
+    }
+}
